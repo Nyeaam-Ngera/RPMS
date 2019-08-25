@@ -29,7 +29,7 @@
 <main>
     
   
-        <div class="container col-sm-8 my-4 bg-light ">
+        <div class="container col-sm-6 my-4 bg-light ">
         <form action="includes/processtrubric.php" class="form-group sm" method="POST">
        
                 <legend class="legend-control bg-success text-white ">Rubric Level Summary for Teacher</legend>
