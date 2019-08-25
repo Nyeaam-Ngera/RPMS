@@ -13,7 +13,7 @@
 
     if(isset($_GET['edit'])){
         $rubric_id = $_GET['edit'];
-        $edit_state = true;
+        
         $query = mysqli_query($conn,"SELECT * FROM trubric_tbl WHERE rubric_id=$rubric_id");
         $record = mysqli_fetch_array($query);
         $rubric_lvl = $record['rubric_lvl'];
@@ -50,12 +50,12 @@
                             <label for="description" class="control-label w-25 "><strong>Description</strong></label>
                             <textarea name="rubric_description" id="policy-content" cols="5" rows="5" class="form-control" value="" placeholder="Enter the description..."><?php echo $rubric_description ?></textarea>
                         </div>  
-                        <div>
-                        <?php if($edit_state == false):?>
-                            <button type="submit" class="btn-sm btn-success my-4" name="save">Save</button>
-                            <?php else: ?>
-                            <button type="submit" class="btn-sm btn-primary my-4" name="update">Update</button>
-                                <?php endif; ?>
+                        <div class="row">
+                        
+                            
+                            <button type="submit" class="btn-sm btn-primary my-4" name="update">Update</button> &nbsp
+                             <a  class="btn-sm btn-danger my-4" href="displaytRubric.php" role="button">Cancel</a>
+                            
                         </div>
         </form>
        
