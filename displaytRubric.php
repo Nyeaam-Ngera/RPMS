@@ -27,7 +27,7 @@
                 ?>
 
             <table class="table table-responsive-sm">
-                <caption>Rubric Level Summary</caption>
+                <caption>Rubric Level for Teacher I-III</caption>
                 <thead class="bg-success text-white">
                 <tr>
                     <th>Level</th>
