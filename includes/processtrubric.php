@@ -1,12 +1,7 @@
 <?php
 
 $rubric_lvl = $level_name = $rubric_description = "";
-$edit_state = false;
 $rubric_id = 0;
-
-
-
-
 
 $conn = new mysqli('localhost', 'root', '' ,'rpms') or die(mysqli_error($conn));
 
