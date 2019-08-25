@@ -5,6 +5,8 @@
             echo '<script class="alert-info">window.alert("Rubric Added") </script>';
         } elseif($_GET['notif'] == "deleted"){
             echo '<script class="alert-danger">window.alert("Rubric Deleted") </script>';
+        } elseif($_GET['notif']=="updated"){
+            echo '<script class="alert-danger">window.alert("Rubric Updated") </script>';
         }
         else{
             echo "";
@@ -25,7 +27,7 @@
                 ?>
 
             <table class="table table-responsive-sm">
-                <caption>Rubric Level Caption</caption>
+                <caption>Rubric Level Summary</caption>
                 <thead class="bg-success text-white">
                 <tr>
                     <th>Level</th>
@@ -42,7 +44,7 @@
                         <td><?php echo $row['rubric_lvl']; ?></td>
                         <td><?php echo $row['level_name']; ?></td>
                         <td><?php echo $row['rubric_description']; ?></td> 
-                        <td><a href="includes/processtrubric.php?edit=<?php echo $row['rubric_id']; ?>" class="btn btn-outline-primary">Update</a></td>
+                        <td><a href="updatetRubric.php?edit=<?php echo $row['rubric_id']; ?>" class="btn btn-outline-primary">Update</a></td>
                         <td><a href="includes/processtrubric.php?delete=<?php echo $row['rubric_id']; ?>" class="btn btn-outline-danger">Delete</a>
                                                     
                         </td>
