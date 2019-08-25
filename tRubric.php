@@ -1,10 +1,5 @@
 <header>
-<?php include 'header.php'; 
-   
-
-
-?>
-
+<?php include 'header.php';?>
 </header>
 
 <main>
@@ -16,7 +11,7 @@
                 <legend class="legend-control bg-success text-white ">Rubric Level Summary for Teacher</legend>
                     <div class="row">
                         <div class="col-sm-6">
-                        <input type="hidden" name="rubric_id" value="<?php echo $rubric_id; ?>"/>
+                        
                             <label for="level" class="control-label"><strong>Rubric Level</strong></label>
                             <input type="number" name="rubric_lvl" id="rubric-lvl" class="form-control" width="500" placeholder="Enter the rubric level..."> 
                         </div>
@@ -33,9 +28,9 @@
                         </div>  
                         <div class="row">
                             <div class="col-md-12">
-                            <button type="submit" class="btn-sm btn-success my-4" name="save">Save</button>
+                            <button type="submit" class="btn btn-success my-4" name="save">Save</button>
 
-                            <a href="displaytRubric.php" class="btn-sm btn-primary my-4" role="button">Show Rubrics</a>
+                            <a href="displaytRubric.php" class="btn btn-primary my-4" role="button">Show Rubrics</a>
                             </div>
 
                             
