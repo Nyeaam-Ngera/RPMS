@@ -140,4 +140,145 @@ if(isset($_GET['mtdelete']))
 }
 
 
+
+if(isset($_POST['tcriteriasave'])){
+   
+    $Criteria = $_POST['Criteria'];
+    $query = "INSERT INTO tcotratingsheet(Criteria) VALUES ('$Criteria')";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+        echo '<script>alert("Successfully Added!")</script>'; 
+        echo '<script>window.location.assign("tcotrating_index.php")</script>';
+
+    }
+
+    else 
+    {
+        echo '<script>alert("Data not Save!")</script>'; 
+
+    }
+}
+
+
+
+if(isset($_POST['tcriteriaupdate']))
+                    
+{
+
+    $tCriteriaID = $_POST['tCriteriaID'];
+    $query = "SELECT * FROM tcotratingsheet where tCriteriaID = '$tCriteriaID'";
+    
+    $Criteria = $_POST['Criteria'];
+
+    $query = "UPDATE tcotratingsheet SET Criteria = '$Criteria' where tCriteriaID = '$tCriteriaID'";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+ 
+        echo '<script>alert("Criteria Updated!")</script>'; 
+        echo '<script>window.location.assign("tcotrating_index.php")</script>';
+    }
+    else
+    {
+        echo '<script>alert("Criteria Not Update!")</script>';
+    }
+    
+}
+
+
+
+if(isset($_GET['tcriteriadelete']))
+                    
+{
+
+    $tCriteriaID = $_GET['tcriteriadelete'];
+    $query = "DELETE FROM tcotratingsheet  where tCriteriaID = '$tCriteriaID'";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+ 
+        echo '<script>alert("Criteria Deleted!")</script>'; 
+        echo '<script>window.location.assign("tcotrating_index.php")</script>';
+    }
+    else
+    {
+        echo '<script>alert("Criteria Not Deleted!")</script>';
+    }
+    
+}
+
+
+
+if(isset($_POST['mtcriteriasave'])){
+   
+    $Criteria = $_POST['criteria'];
+    $query = "INSERT INTO mtcotratingsheet(criteria) VALUES ('$Criteria')";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+        echo '<script>alert("Successfully Added!")</script>'; 
+        echo '<script>window.location.assign("mtcotrating_index.php")</script>';
+
+    }
+
+    else 
+    {
+        echo '<script>alert("Data not Save!")</script>'; 
+
+    }
+}
+
+
+if(isset($_GET['mtcriteriadelete']))
+                    
+{
+
+    $mt_criteriaid = $_GET['mtcriteriadelete'];
+    $query = "DELETE FROM mtcotratingsheet  where mt_criteriaid = '$mt_criteriaid'";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+ 
+        echo '<script>alert("Criteria Deleted!")</script>'; 
+        echo '<script>window.location.assign("mtcotrating_index.php")</script>';
+    }
+    else
+    {
+        echo '<script>alert("Criteria Not Deleted!")</script>';
+    }
+    
+}
+
+
+if(isset($_POST['mtcriteriaupdate']))
+                    
+{
+
+    $mt_criteriaid = $_POST['mt_criteriaid'];
+    $query = "SELECT * FROM mtcotratingsheet where mt_criteriaid = '$mt_criteriaid'";
+    
+    $Criteria = $_POST['criteria'];
+
+    $query = "UPDATE mtcotratingsheet SET criteria = '$Criteria' where mt_criteriaid = '$mt_criteriaid'";
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run)
+    {
+ 
+        echo '<script>alert("Criteria Updated!")</script>'; 
+        echo '<script>window.location.assign("mtcotrating_index.php")</script>';
+    }
+    else
+    {
+        echo '<script>alert("Criteria Not Update!")</script>';
+    }
+    
+}
+
 ?>
